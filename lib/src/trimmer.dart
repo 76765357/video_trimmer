@@ -32,6 +32,10 @@ class Trimmer {
 
   File? currentVideoFile;
 
+  void cancel(){
+    FFmpegKit.cancel();
+  }
+
   /// Listen to this stream to catch the events
   Stream<TrimmerEvent> get eventStream => _controller.stream;
 
